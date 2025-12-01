@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: white;
+}
+
+.dashboard {
+  display: flex;
+  height: calc(100vh - 70px); /* adjust for navbar height */
+}
+
+.welcome-text {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  padding: 100px 60px;
+}
+
+.welcome-text h1 {
+  font-size: 48px;
+  color: #8c5a28;
+  line-height: 1.2;
+  margin-top: 20px;
+}
+
+.welcome-text span {
+  font-weight: bold;
+}
+
+.image-panel {
+  flex: 1;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0.0), transparent),
+              url('../images/dashpic.png') no-repeat center center;
+  background-size: cover;
+}
