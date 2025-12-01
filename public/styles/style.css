@@ -1,0 +1,122 @@
+/* LOGIN & REGISTER */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+h1{
+    color: brown;
+}
+body {
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+}
+
+.container {
+  text-align: center;
+}
+
+.back-button {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+.back-button a {
+  font-size: 28px;
+  text-decoration: none;
+  color: #7b4c20;
+  border: 2px solid #7b4c20;
+  border-radius: 50%;
+  padding: 8px 12px;
+}
+
+.login-box {
+  width: 300px;
+  margin: auto;
+}
+
+.login-box h4 {
+  color: #a36a30;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.login-box h1 {
+  color: #a36a30;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.login-box input[type="text"],
+.login-box input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(160, 82, 45, 0.1);
+  background: #fffaf7;
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper input {
+  padding-right: 40px;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #a36a30;
+}
+
+.options {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 12px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.options a {
+  text-decoration: none;
+  color: #a36a30;
+  font-size: 12px;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #a36a30;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(160, 82, 45, 0.3);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.error-message {
+  color: #b3261e;
+  background-color: #fdecea;
+  padding: 10px 14px;
+  margin-bottom: 16px;
+  border-radius: 10px;
+  font-size: 14px;
+  text-align: center;
+}
+
+
