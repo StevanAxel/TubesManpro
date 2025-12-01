@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="/styles/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="login-box">
+        <h4>Welcome to Kapi Event Organizer System</h4>
+        <br />
+        <h1>Log In</h1>
+
+        <% if (error) { %>
+        <div class="error-message">Wrong Username / Password</div>
+        <% } %>
+
+        <form action="/login" method="POST">
+          <input type="text" name="username" placeholder="Username" required />
+          <div class="password-wrapper">
+            <input type="password" name="password" placeholder="Password" required />
+            <span class="toggle-password" style="padding-top: 8px;">&#128065;</span>
+          </div>
+
+          <button type="submit" class="login-btn">Log In</button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const toggle = document.querySelector(".toggle-password");
+        const passwordInput = document.querySelector('input[name="password"]');
+
+        toggle.addEventListener("click", function () {
+          const type = passwordInput.getAttribute("type") === "password" ? "text" : "password";
+          passwordInput.setAttribute("type", type);
+          toggle.textContent = type === "password" ? "👁️" : "🙈"; // opsional ubah ikon
+        });
+      });
+    </script>
+  </body>
+</html>

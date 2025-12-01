@@ -1,0 +1,68 @@
+    <%- include("navbarass.ejs") %>
+
+    <% if (status) { %>
+  <script>
+    alert("<%= status %>");
+  </script>
+<% } %>
+
+    <div class="layoutBody">
+    <div class="container">
+      <h1><%= heading %></h1>
+
+      <div class="top-bar">
+        <form action="/assistant/mngclient" method="GET">
+        <div class="search">
+          <label>Find</label>
+          <div class="search-box">
+            <input type="text" name="search" placeholder="Search Client Name ..." />
+            <span class="search-icon">&#128269;</span>
+          </div>
+        </div>
+        </form>
+
+        <div class="action-buttons">
+          <a href="/assistant/mngclient/add-client"><button class="add-btn">Add +</button></a>
+        </div>
+      </div>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <% columns.forEach(col => { %>
+              <th><%= col %></th>
+              <% }) %>
+            </tr>
+          </thead>
+          <tbody>
+            <% clients.forEach(client => { %>
+            <tr>
+              <td><a href="/assistant/mngclient/edit-client/<%=client.id_klien%>"><button class="edit-icon">&#9998;</button></td></a>
+              <td><%= client.nama %></td>
+              <td><%= client.alamat%></td>
+              <td><%=client.kontak%></td>
+            </tr>
+            <% }) %>
+          </tbody>
+        </table>
+
+        
+      </div>
+      <div class="pagination">
+          <% if (currentPage > 1) { %>
+            <a href="?page=<%= currentPage - 1 %>">Previous</a>
+          <% } %>
+
+          <% for (let i = 1; i <= totalPages; i++) { %>
+            <a href="?page=<%= i %>" class="<%= i === currentPage ? 'active' : '' %>"><%= i %></a>
+          <% } %>
+
+          <% if (currentPage < totalPages) { %>
+            <a href="?page=<%= currentPage + 1 %>">Next</a>
+          <% } %>
+        </div>
+    </div>
+    </div>
+  </body>
+</html>
